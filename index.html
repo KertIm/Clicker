@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Clicker</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <script src="script.js"></script>
+    
+    <div id="name"><h1>Flower Clicker</h1></div>
+    
+    <img src="Photos/blackRose.png" id="clickButton" onclick="increment()">
+
+    <div id="info"> <!-- contains the info (view below), in <span> tags because they constantly evolve -->
+        <p id="flowerCounter">Flowers = <span id="showFlowers" class="number">0</span></p> <!--  number of flowers -->
+
+        <p>Flowers per second = <span id="showFlowersPerSecond" class="number">0</span></p> <!-- flowers per second -->
+
+        <p>Flowers per click = <span id="showFlowersPerClick" class="number">1</span></p> <!--  flowers per click -->
+
+        <p id="gameOver"></p> <!-- for text to appear when you win - do i need a game over????-->
+    </div>
+
+    <div class="itemContainer"> <!-- items that you can buy -->
+        <div class="item"> <!-- item -->
+            <div class="containerImage"> <!-- image -->
+                <img src="Photos/blueFlower.png" id="blueFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer"> <!-- button to buy item -->
+                    <button onclick="buyBlue()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> <!-- stats about item -->
+                <p>Flowers: <span id="blueNum">0</span></p>
+
+                <p>Flower cost: <span id="blueCost">10</span></p>
+
+                <p>+1 Flower per second</p>
+            </div>
+        </div>
+
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/redFlower.png" id="redFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer"> 
+                    <button onclick="buyRed()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText">
+                <p>Flowers: <span id="redNum">0</span></p>
+
+                <p>Flower cost: <span id="redCost">20</span></p>
+
+                <p>+1 Flower per click</p>
+            </div>
+        </div>
+
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/orangeFlower.png" id="orangeFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buyOrange()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="orangeNum">0</span></p>
+
+                <p>Flower cost: <span id="orangeCost">500</span></p>
+
+                <p>+50 Flower per second</p>
+            </div>
+        </div>
+
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/purpleFlower.png" id="purpleFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer"> 
+                    <button onclick="buyPurple()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="purpleNum">0</span></p>
+
+                <p>Flower cost: <span id="purpleCost">1 000</span></p>
+
+                <p>+30 Flower per click</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="containerImage"> 
+                <img src="Photos/whiteFlower.png" id="whiteFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buyWhite()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="whiteNum">0</span></p>
+
+                <p>Flower cost: <span id="whiteCost">2 000</span></p>
+
+                <p>+100 Flower per second</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="containerImage"> 
+                <img src="Photos/rainbowFlower.png" id="rainbowFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buyRainbow()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="rainbowNum">0</span></p>
+
+                <p>Flower cost: <span id="rainbowCost">5 000</span></p>
+
+                <p>+500 Flower per second</p>
+            </div>
+        </div>
+
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/yellowFlower.png" id="yellowFlowerImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buyYellow()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="yellowNum">0</span></p>
+
+                <p>Flower cost: <span id="yellowCost">5 000</span></p>
+
+                <p>+1oo Flower per click</p>
+            </div>
+        </div>
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/lotus.png" id="lotusImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buyLotus()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="lotusNum">0</span></p>
+
+                <p>Flower cost: <span id="lotusCost">10 000</span></p>
+
+                <p>+1 000 Flower per second</p>
+            </div>
+        </div>
+        <div class="item"> 
+            <div class="containerImage"> 
+                <img src="Photos/2Flowers.png" id="2FlowersImage" class="itemImage" style="width:200px;height:170px;">
+
+                <div class="buyButtonContainer">
+                    <button onclick="buy2Flowers()" class="buyButton">Buy</button>
+                </div>
+            </div>
+            <div class="containerText"> 
+                <p>Flowers: <span id="lastNum">0</span></p>
+
+                <p>Flower cost: <span id="lastCost">50 000</span></p>
+
+                <p>+5 000 Flower per second</p>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+
+
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display&display=swap');
+body{
+  font-family: 'Playfair Display', serif;
+  background-color: rgb(131, 131, 155);
+  text-align: center;
+}
+#name{
+  font-family: 'Kaushan Script', cursive;
+	margin-top: 0px;
+	font-size: 20px;
+	margin-bottom: -80px;
+}
+.itemContainer {
+  display: flex; /* using flexbox to align items */
+  flex-wrap: wrap; /* to force items on multiple lines */
+}
+.item {
+  padding: 10px; /* some spacing around */
+  flex: 10%; /* to put 4 items on each line (100/4 = 25) */
+}
+#clickButton {  /*blackrose*/
+	width: 310px;
+	height: 310px;
+	transition-duration: 0.3s;
+	margin-top: 60px;
+	cursor: pointer; 
+}
+#info { /*below blackrose*/
+	margin-top: 5px;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+#flowerCounter {
+	font-size: 20px;
+	font-weight: bold;
+}
+#gameOver {
+	font-size: 25px;
+	color: #832532;
+	font-style: italic;
+}
+.itemImage {
+	height: 15%;
+	width: 15%;
+}
+.containerText {
+	font-size: 13px;
+  text-align: center;
+}
+.buyButtonContainer {
+	margin-top: 5px;
+}
+.buyButton {
+	cursor: pointer;
+	text-align: center;
+	background: #464747;
+	color: #fff;
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+	border: none;
+}
+.buyButton:hover {
+	opacity: 0.5;
+}
+@media (max-width: 800px) {
+  .item {
+    flex: 100%; /* makes one item on each line */
+  }
+}
