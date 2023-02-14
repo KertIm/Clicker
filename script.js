@@ -33,34 +33,25 @@ function increment() {
 		document.getElementById("gameOver").innerText = "You won the game! "
 	}
 }
-// function that happens every second
+// function every second
 setInterval(function() {
-	flowers += flowersPerSecond; // adds the number of flowers per second to your total flowers
-	document.getElementById("showFlowers").innerText = flowers; // uses DOM to change the number of flowers in the HTML
-}, 1000) // every second
+	flowers += flowersPerSecond; 
+	document.getElementById("showFlowers").innerText = flowers;
+}, 1000)
 
 
-// different functions for each item
+//functions for each item
 function buyBlue() {
-
-	if (flowers >= blueCost) {// checks if you have enough flowers
-	
-		flowers -= blueCost; // subtracts cost flowers 
-
+	if (flowers >= blueCost) {
+		flowers -= blueCost;
 		document.getElementById("showFlowers").innerText = flowers;
-
-		blueNum++; // increments number of that item 
-
+		blueNum++; 
 		document.getElementById("blueNum").innerText = blueNum;
-	
-		blueCost *=2; // doubles price of that item - maybe 1.5 better??
-
+		blueCost *=2; 
 		document.getElementById("blueCost").innerText = blueCost;
-
-		flowersPerSecond += 1; // increases number of flowers per second
-
+		flowersPerSecond += 1;
 		document.getElementById("showFlowersPerSecond").innerText = flowersPerSecond;	
-	}	else { // if there enough flowers
+	}	else {
 		alert("You don't have enough Flowers!") 
 	}
 }
