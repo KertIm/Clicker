@@ -12,12 +12,12 @@ body{
 	margin-bottom: -80px;
 }
 .itemContainer {
-  display: flex; /* using flexbox to align items */
-  flex-wrap: wrap; /* to force items on multiple lines */
+  display: flex;
+  flex-wrap: wrap; 
 }
 .item {
-  padding: 10px; /* some spacing around */
-  flex: 10%; /* to put 4 items on each line (100/4 = 25) */
+  padding: 10px; 
+  flex: 10%; 
 }
 #clickButton {  /*blackrose*/
 	width: 310px;
@@ -70,6 +70,6 @@ body{
 }
 @media (max-width: 800px) {
   .item {
-    flex: 100%; /* makes one item on each line */
+    flex: 100%; 
   }
 }

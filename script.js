@@ -2,7 +2,6 @@ var flowers = 0;
 var flowersPerSecond = 0;
 var flowersPerClick = 1;
 
-//cost 
 var blueCost = 10;
 var redCost = 20;
 var orangeCost = 500;	
@@ -12,7 +11,7 @@ var rainbowCost = 5000;
 var yellowCost = 5000;
 var lotusCost = 10000;
 var lastCost = 50000;
-//how many of items
+
 var blueNum = 0;
 var redNum = 0;
 var orangeNum = 0;
@@ -23,24 +22,19 @@ var yellowNum = 0;
 var lotusNum = 0;
 var lastNum = 0;
 
-//on click
 function increment() {
-	flowers += flowersPerClick; // adds the number of flowers per click to your total flowre
-	document.getElementById("showFlowers").innerText = flowers; // uses DOM to change the number of flowres in the HTMl
+	flowers += flowersPerClick; 
+	document.getElementById("showFlowers").innerText = flowers; 
 
-	if (flowers >= 7800000000) // depends on the last item- think later
+	if (flowers >= 7800000000) 
 	{
 		document.getElementById("gameOver").innerText = "You won the game! "
 	}
 }
-// function every second
 setInterval(function() {
 	flowers += flowersPerSecond; 
 	document.getElementById("showFlowers").innerText = flowers;
 }, 1000)
-
-
-//functions for each item
 function buyBlue() {
 	if (flowers >= blueCost) {
 		flowers -= blueCost;
